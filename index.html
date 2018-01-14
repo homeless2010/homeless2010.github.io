@@ -28,19 +28,25 @@
     /*height: 360px;*/
     width: 100%;
    }
-
+   .modal-content{
+     background-color:rgba(0,0,0,0.3);
+   }
+   .modal-text{
+     color:white
+   }
+/* #myModal{filter: Alpha(opacity=6);opacity:0.06;} */
+#myModal{filter: Alpha(opacity=6);}
    </style>
    </head>
    <body>
-     <!-- 模态框（Modal） -->
    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
    	<div class="modal-dialog">
    		<div class="modal-content">
    			<div class="modal-header">
-   				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
-   				</button>
+   				<!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+   				</button> -->
    				<h4 class="modal-title" id="myModalLabel">
-            <a data-toggle="collapse" data-parent="#myModal"
+            <a data-toggle="collapse" data-parent="#myModal" style="color:#fefefe;font-weight: bolder;"
 				   href="#collapseOne">
 					技术改变世界 - 崔朝将的个人博客
 				</a>
@@ -49,13 +55,19 @@
    			</div>
         <div id="collapseOne" class="panel-collapse collapse in">
 
-          <div class="modal-body">
-              <a>日志</a>
+          <div class="modal-body modal-text">
+
+            <p style="background-color:rgba(0,0,0,0.5);border-radius: 0.5em;">
+                » <a>生活</a>
+            </p>
+            <p style="background-color:rgba(0,0,0,0.5);border-radius: 0.5em;">
+              » <a>技术</a>
+            </p>
           </div>
-          <div class="modal-footer">
-             <div>
+          <div class="modal-footer modal-text">
+
                email:paulvsjames@gmail.com
-             </div>
+
 
         </div>
 
@@ -69,7 +81,6 @@
    		</div><!-- /.modal-content -->
    	</div><!-- /.modal-dialog -->
    </div><!-- /.modal -->
-</div>
      <div id="myCarousel" class="carousel slide">
    	<!-- 轮播（Carousel）指标 -->
    	<ol class="carousel-indicators">
@@ -80,28 +91,52 @@
    	<!-- 轮播（Carousel）项目 -->
    	<div class="carousel-inner">
    		<div class="item active">
-   			<img src="assets/image/coldplay.jpg" alt="First slide">
+   			<img src="assets/image/pub_1.jpg" alt="First slide">
    		</div>
    		<div class="item">
-   			<img src="assets/image/pitt.jpg" alt="Second slide">
+   			<img src="assets/image/pub_2.jpg" alt="Second slide">
    		</div>
    		<div class="item">
-   			<img src="assets/image/rodman.jpg" alt="Third slide">
+   			<img src="assets/image/pub_3.jpg" alt="Third slide">
    		</div>
    		<div class="item">
-   			<img src="assets/image/pub_76.jpg" alt="Third slide">
+   			<img src="assets/image/pub_4.jpg" alt="Third slide">
    		</div>
    		<div class="item">
-   			<img src="assets/image/pub_95.jpg" alt="Third slide">
+   			<img src="assets/image/pub_5.jpg" alt="Third slide">
    		</div>
    		<div class="item">
-   			<img src="assets/image/pub_148.jpg" alt="Third slide">
+   			<img src="assets/image/pub_6.jpg" alt="Third slide">
    		</div>
    		<div class="item">
-   			<img src="assets/image/pub_199.jpg" alt="Third slide">
+   			<img src="assets/image/pub_7.jpg" alt="Third slide">
    		</div>
    		<div class="item">
-   			<img src="assets/image/pub_259.jpg" alt="Third slide">
+   			<img src="assets/image/pub_8.jpg" alt="Third slide">
+   		</div>
+   		<div class="item">
+   			<img src="assets/image/pub_9.jpg" alt="Third slide">
+   		</div>
+   		<div class="item">
+   			<img src="assets/image/pub_10.jpg" alt="Third slide">
+   		</div>
+   		<div class="item">
+   			<img src="assets/image/pub_11.jpg" alt="Third slide">
+   		</div>
+   		<div class="item">
+   			<img src="assets/image/pub_12.jpg" alt="Third slide">
+   		</div>
+   		<div class="item">
+   			<img src="assets/image/pub_13.jpg" alt="Third slide">
+   		</div>
+   		<div class="item">
+   			<img src="assets/image/pub_14.jpg" alt="Third slide">
+   		</div>
+   		<div class="item">
+   			<img src="assets/image/pub_15.jpg" alt="Third slide">
+   		</div>
+   		<div class="item">
+   			<img src="assets/image/pub_16.jpg" alt="Third slide">
    		</div>
    	</div>
    	<!-- 轮播（Carousel）导航 -->
@@ -112,7 +147,9 @@
        <!-- 控制按钮 -->
    </div>
    <script type="text/javascript">
-   $(function () { $('#myModal').modal('show')});
+   $(function () { $('#myModal').modal('show');
+  $("#myCarousel").carousel("cycle");
+ });
 window.onload=function()
 {
 var w=document.documentElement.clientWidth ;//可见区域宽度
