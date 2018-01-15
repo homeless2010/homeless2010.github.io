@@ -25,11 +25,29 @@
    .modal-content{
      background-color:rgba(0,0,0,0.3);
    }
-   .modal-text{
+   .modal-footer{
      color:white
    }
 /* #myModal{filter: Alpha(opacity=6);opacity:0.06;} */
 #myModal{filter: Alpha(opacity=6);}
+
+.modal-body p:hover{
+	background-color: #fefefe;
+	color: #222;
+}
+ .modal-body p:hover a{
+	color: #222;
+}
+.modal-body p{
+	background-color:rgba(0,0,0,0.5);
+  border-radius: 0.5em;
+	text-shadow:0 1px 1px #333;
+  color: #fefefe;
+}
+.modal-body a{
+	color: #fefefe;
+	text-shadow:0 1px 1px #333
+}
    </style>
    </head>
    <body>
@@ -49,16 +67,16 @@
    			</div>
         <div id="collapseOne" class="panel-collapse collapse in">
 
-          <div class="modal-body modal-text">
+          <div class="modal-body">
 
-            <p style="background-color:rgba(0,0,0,0.5);border-radius: 0.5em;">
-                » <a>生活</a>
+            <p>
+              » <a>生活</a>
             </p>
-            <p style="background-color:rgba(0,0,0,0.5);border-radius: 0.5em;">
+            <p>
               » <a>技术</a>
             </p>
           </div>
-          <div class="modal-footer modal-text">
+          <div class="modal-footer">
 
                email:paulvsjames@gmail.com
 
