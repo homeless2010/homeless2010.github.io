@@ -25,19 +25,39 @@
    .modal-content{
      background-color:rgba(0,0,0,0.3);
    }
-   .modal-text{
+   .modal-footer{
      color:white
    }
 /* #myModal{filter: Alpha(opacity=6);opacity:0.06;} */
 #myModal{filter: Alpha(opacity=6);}
+
+.modal-body p:hover{
+	background-color: #fefefe;
+	color: #222;
+}
+ .modal-body p:hover a{
+	color: #222;
+}
+.modal-body p{
+	background-color:rgba(0,0,0,0.5);
+  border-radius: 0.5em;
+	text-shadow:0 1px 1px #333;
+  color: #fefefe;
+  line-height: 180%;
+  font-size: 1.2em;
+}
+.modal-body a{
+	color: #fefefe;
+	text-shadow:0 1px 1px #333
+}
    </style>
    </head>
    <body>
    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-   	<div class="modal-dialog">
+   	<div class="modal-dialog modal-lg">
    		<div class="modal-content">
    			<div class="modal-header">
-   				<!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+   				<!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true" data-target="#myModal">×
    				</button> -->
    				<h4 class="modal-title" id="myModalLabel">
             <a data-toggle="collapse" data-parent="#myModal" style="color:#fefefe;font-weight: bolder;"
@@ -49,16 +69,16 @@
    			</div>
         <div id="collapseOne" class="panel-collapse collapse in">
 
-          <div class="modal-body modal-text">
+          <div class="modal-body">
 
-            <p style="background-color:rgba(0,0,0,0.5);border-radius: 0.5em;">
-                » <a>生活</a>
+            <p>
+              » <a href="home/navigation.html">生活</a>
             </p>
-            <p style="background-color:rgba(0,0,0,0.5);border-radius: 0.5em;">
-              » <a>技术</a>
+            <p>
+              » <a href="home/navigation.html">技术</a>
             </p>
           </div>
-          <div class="modal-footer modal-text">
+          <div class="modal-footer">
 
                email:paulvsjames@gmail.com
 
@@ -141,7 +161,8 @@
        <!-- 控制按钮 -->
    </div>
    <script type="text/javascript">
-   $(function () { $('#myModal').modal('show');
+   $(function () {
+     $('#myModal').modal('show');
   $("#myCarousel").carousel("cycle");
  });
 window.onload=function()
@@ -150,6 +171,24 @@ var w=document.documentElement.clientWidth ;//可见区域宽度
 var h=document.documentElement.clientHeight;//可见区域高度
 $("div.item").css("height",h+"px");
 }
+function centerModals() {
+　　$('#myModal').each(function(i) {
+　　　　var $clone = $(this).clone().css('display','block').appendTo('body');
+　　　　var top = Math.round(($clone.height() - $clone.find('.modal-content').height()) / 2);
+　　　　top = top > 0 ? top : 0;
+　　　　$clone.remove();
+　　　　$(this).find('.modal-content').css("margin-top", top);
+　　});
+};
+$('#myModal').on('show.bs.modal', centerModals);
+//禁用空白处点击关闭
+$('#myModal').modal({
+backdrop: 'static',
+keyboard: false,//禁止键盘
+show:false
+});
+//页面大小变化是仍然保证模态框水平垂直居中
+$(window).on('resize', centerModals);
 </script>
    </body>
 </html>
