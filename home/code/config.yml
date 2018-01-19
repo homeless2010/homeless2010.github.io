@@ -4,11 +4,11 @@ site:
     limit: 10
     theme: theme
     lang: zh
-    url: "https://homeless2010.github.io/home/code/"
+    url: "https://homeless2010.github.io/home/code/public/"
     comment: username
     logo: "-/images/avatar.png"
     # link: "{category}/{year}/{month}/{day}/{title}.html"
-    root: "https://homeless2010.github.io/home/code/"
+    root: "https://homeless2010.github.io/home/code/public/"
 
 authors:
     me:
