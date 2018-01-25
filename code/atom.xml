@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>崔朝将的个人博客</title>
   <id>https://homeless2010.github.io/code</id>
-  <updated>2018-01-22T23:22:27+08:00</updated>
+  <updated>2018-01-25T21:55:45+08:00</updated>
   <subtitle>关于技术</subtitle>
   <link href="https://homeless2010.github.io/code"></link>
   <author>
     <name>崔朝将的个人博客</name>
   </author>
+  <entry>
+    <title>记录一次奇怪问题</title>
+    <updated>2018-01-25T09:59:00+08:00</updated>
+    <id>tag:homeless2010.github.io,2018-01-25:/code/about_use_postman.html</id>
+    <content type="html">&lt;p&gt;记录一次奇怪问题。&lt;/p&gt;&#xA;</content>
+    <link href="https://homeless2010.github.io/code/about_use_postman.html"></link>
+    <author>
+      <name>崔朝将</name>
+    </author>
+  </entry>
   <entry>
     <title>简洁的静态博客构建工具 —— 纸小墨（InkPaper）</title>
     <updated>2016-07-11T17:00:00+08:00</updated>
