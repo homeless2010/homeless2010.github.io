@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1">
+<meta name="renderer" content="webkit">
+<meta name="google" value="notranslate">
+<meta name="robots" content="index,follow">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="崔朝将的个人博客">
+<meta name="twitter:description" content="关于技术">
+<meta name="twitter:image:src" content="https://homeless2010.github.io/codehttps://homeless2010.github.io/code/images/avatar.png">
+
+<meta property="og:url" content="https://homeless2010.github.io/code">
+<meta property="og:title" content="崔朝将的个人博客">
+<meta property="og:description" content="关于技术">
+<meta property="og:site_name" content="崔朝将的个人博客">
+<meta property="og:image" content="https://homeless2010.github.io/codehttps://homeless2010.github.io/code/images/avatar.png">
+<meta property="og:type" content="website">
+<meta name="robots" content="noodp">
+
+<meta itemprop="name" content="崔朝将的个人博客">
+<meta itemprop="description" content="关于技术">
+<meta itemprop="image" content="https://homeless2010.github.io/codehttps://homeless2010.github.io/code/images/avatar.png">
+
+<link rel="canonical" href="https://homeless2010.github.io/code">
+
+<link rel="shortcut icon" href="https://homeless2010.github.io/code/favicon.png">
+<link rel="apple-itouch-icon" href="https://homeless2010.github.io/code/favicon.png">
+<link rel="stylesheet" href="https://homeless2010.github.io/code/bundle/index.css">
+<script type="text/javascript">
+    var timeSinceLang = {
+        year: '年前',
+        month: '个月前',
+        day: '天前',
+        hour: '小时前',
+        minute: '分钟前',
+        second: '秒前'
+    };
+    var root = 'https:\/\/homeless2010.github.io\/code';
+</script>
+
+
+        <meta name="keywords" content="linux,">
+        <meta name="description" content="linux定时任务">
+        <meta name="author" content="崔朝将">
+        <title>linux定时任务</title>
+    </head>
+    <body>
+        <article class="container">
+            <header class="header-wrap">
+  <a class="index" href="https://homeless2010.github.io/code/">
+    <img class="logo" src="https://homeless2010.github.io/code/images/avatar.png" />
+    崔朝将的个人博客
+  </a>
+  <ul class="menu">
+      <li class="menu-item"><a href="https://homeless2010.github.io/code/archive.html">归档</a></li>
+      <li class="menu-item"><a href="https://homeless2010.github.io/code/tag.html">标签</a></li>
+      <li class="menu-item"><a href="https://homeless2010.github.io/code/atom.xml">订阅</a></li>
+  </ul>
+</header>
+
+            <article class="main article">
+                <h1 class="title">linux定时任务</h1>
+                <section class="info">
+                    <span class="avatar" style="background-image: url(https://homeless2010.github.io/code/images/avatar.png);"></span>
+                    <a class="name" href="https://homeless2010.github.io/code/about.me.html">崔朝将</a>
+                    
+                    <span class="date" data-time="1517072540"><span class="from"></span></span>
+                    
+                    <span class="tags"><a class="tag" href="https://homeless2010.github.io/code/tag/linux/index.html">linux</a></span>
+                </section>
+                <article class="content"><h3>linux定时任务</h3>
+
+<p>最近在学习linux，关于定时任务：</p>
+
+<p>1.写好任务脚本；
+2.执行 crontab -e编辑定时命令如 0 1 * * * root /data/bakdb.sh  &gt; /data/bak.log 2&gt;&amp;1 保存并退出
+3.重启crond服务</p>
+
+<blockquote>
+<p>Tips:网上说重启命令service crond restart或service crond reload<br />
+这个命令在red hat当中常用，有的linux发行版本中没有这个命令，这时<br />
+/etc/init.d/cron stop<br />
+/etc/init.d/cron start</p>
+</blockquote>
+
+<h4>linux功能很强大，昨天准备装debian testing但是对分区还没整明白,担心丢失磁盘数据就没敢装，<br>总之前路慢慢&hellip;<br>未完待续&hellip;</h4>
+</article>
+                <section class="author">
+                    <div class="avatar" style="background-image: url(https://homeless2010.github.io/code/images/avatar.png);"></div>
+                    <a class="name" href="https://homeless2010.github.io/code/about.me.html">崔朝将</a>
+                    <div class="intro">虚度人生几十载，忽觉时光不复返</div>
+                </section>
+                <section class="recommend">
+                    
+                    
+                    <section class="nav next">
+                        <div class="head">下篇文章</div>
+                        <a class="link" href="https://homeless2010.github.io/code/about_use_postman.html">记录一次奇怪问题</a>
+                    </section>
+                    
+                </section>
+                
+    <section id="disqus_thread"></section>
+    <script type="text/javascript">
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//username.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+
+
+            </article>
+        </article>
+        <footer class="footer">
+    <span class="copyright">
+        崔朝将的个人博客 ©
+        <script type="text/javascript">
+            document.write(new Date().getFullYear());
+        </script>
+    </span>
+    <span class="publish">Powered by <a href="http://www.chole.io/" target="_blank">Ink</a></span>
+</footer>
+
+        <script src="https://homeless2010.github.io/code/bundle/index.js"></script>
+    </body>
+</html>
