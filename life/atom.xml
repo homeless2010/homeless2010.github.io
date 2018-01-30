@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>崔朝将的个人博客</title>
   <id>https://homeless2010.github.io/life</id>
-  <updated>2018-01-28T00:41:50+08:00</updated>
+  <updated>2018-01-30T23:40:36+08:00</updated>
   <subtitle>关于生活</subtitle>
   <link href="https://homeless2010.github.io/life"></link>
   <author>
     <name>崔朝将的个人博客</name>
   </author>
+  <entry>
+    <title>闲想</title>
+    <updated>2018-01-30T23:38:00+08:00</updated>
+    <id>tag:homeless2010.github.io,2018-01-30:/life/thoughtfully.html</id>
+    <content type="html">&lt;p&gt;闲想。&lt;/p&gt;&#xA;</content>
+    <link href="https://homeless2010.github.io/life/thoughtfully.html"></link>
+    <author>
+      <name>崔朝将</name>
+    </author>
+  </entry>
   <entry>
     <title>2017个人总结</title>
     <updated>2018-01-25T22:12:00+08:00</updated>

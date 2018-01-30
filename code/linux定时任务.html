@@ -70,7 +70,7 @@
                     <span class="avatar" style="background-image: url(https://homeless2010.github.io/code/images/avatar.png);"></span>
                     <a class="name" href="https://homeless2010.github.io/code/about.me.html">崔朝将</a>
                     
-                    <span class="date" data-time="1517072540"><span class="from"></span></span>
+                    <span class="date" data-time="1517327120"><span class="from"></span></span>
                     
                     <span class="tags"><a class="tag" href="https://homeless2010.github.io/code/tag/linux/index.html">linux</a></span>
                 </section>
@@ -78,9 +78,11 @@
 
 <p>最近在学习linux，关于定时任务：</p>
 
-<p>1.写好任务脚本；
-2.执行 crontab -e编辑定时命令如 0 1 * * * root /data/bakdb.sh  &gt; /data/bak.log 2&gt;&amp;1 保存并退出
-3.重启crond服务</p>
+<ol>
+<li>写好任务脚本；</li>
+<li>执行 crontab -e编辑定时命令如 0 1 * * * root /data/bakdb.sh  &gt; /data/bak.log 2&gt;&amp;1 保存并退出</li>
+<li>重启crond服务</li>
+</ol>
 
 <blockquote>
 <p>Tips:网上说重启命令service crond restart或service crond reload<br />
@@ -90,6 +92,63 @@
 </blockquote>
 
 <h4>linux功能很强大，昨天准备装debian testing但是对分区还没整明白,担心丢失磁盘数据就没敢装，<br>总之前路慢慢&hellip;<br>未完待续&hellip;</h4>
+
+<h4>接上</h4>
+
+<h3>rsync实现增量同步</h3>
+
+<p>scp和rsync(区别自行百度)
+219.219.115.94 tomcat<br />
+219.219.115.95 mysql<br />
+219.219.115.89 备份服务器<br />
+rsync参考<a href="http://www.blogjava.net/ruoyoux/articles/232075.html">http://www.blogjava.net/ruoyoux/articles/232075.html</a></p>
+
+<p>95：</p>
+
+<ol>
+<li>在/etc目录下建立rsyncd.conf文件<br />
+uid = nobody<br />
+gid = nobody<br />
+use chroot = no<br />
+max connections = 4<br />
+log file = /var/log/rsyncd.log<br />
+pid file = /var/run/rsyncd.pid<br />
+lock file = /var/run/rsync.lock<br /></li>
+</ol>
+
+<p>[backup]<br />
+path = /opt/sudytech/backup<br />
+comment = backup folder<br />
+uid = root<br />
+ignore errors<br />
+read only = no<br />
+list = no<br />
+auth users = root<br />
+secrets file = /etc/backup.scrt</p>
+
+<ol>
+<li><p>在/etc下建立backup.scrt文件<br />
+输入： 用户名：密码<br />
+例：rsynctest:testrsync<br />
+将文件权限修改600，我修改成700了</p></li>
+
+<li><p>启动rsync服务：<br />
+rsync &ndash;daemon （rsync运行在tcp 873端口，可以通过netstat -an|grep LISTEN察看）。<br />
+重启 rsync服务rm /var/run/rsyncd.pid<br />
+然后再启动89：在89上（rsync客户机）上建立/etc/backup文件，内容为A主机的密码<br />
+例： testsync 修改档案权限我改成7005、在89用crontab建立脚本<br />
+例：0　21　*　<em>　</em> rsync -vzrtp &ndash;progress &ndash;delete &ndash;password-file=/etc/backup root@192.168.1.10::backup /opt/sudytech/backup</p></li>
+</ol>
+
+<p>94:</p>
+
+<p>同95只是同步时报113 10 124的错误<br />
+网上说防火墙问题执行service iptables start / stop无效原来在CentOS 7或RHEL 7或Fedora中防火墙由firewalld来管理<br />
+vi /etc/sysconfig/iptables加入<br />
+-A RH-Firewall-1-INPUT -m state &ndash;state NEW -m tcp -p tcp &ndash;dport 873 -j ACCEPT无效可能应该是<br />
+-A INPUT -p tcp -m state &ndash;state NEW -m tcp &ndash;dport 873 -j ACCEPT<br />
+直接执行了firewall-cmd &ndash;zone=public &ndash;add-port=873/tcp &ndash;permanent    （&ndash;permanent永久生效，没有此参数重启后失效）<br />
+ok！</p>
 </article>
                 <section class="author">
                     <div class="avatar" style="background-image: url(https://homeless2010.github.io/code/images/avatar.png);"></div>
