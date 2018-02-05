@@ -43,7 +43,7 @@ max connections = 4
 log file = /var/log/rsyncd.log  
 pid file = /var/run/rsyncd.pid  
 lock file = /var/run/rsync.lock  
-
+<br>
 [backup]  
 path = /opt/sudytech/backup  
 comment = backup folder  

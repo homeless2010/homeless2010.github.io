@@ -106,17 +106,16 @@ rsync参考<a href="http://www.blogjava.net/ruoyoux/articles/232075.html">http:/
 <p>95：</p>
 
 <ol>
-<li>在/etc目录下建立rsyncd.conf文件<br />
+<li><p>在/etc目录下建立rsyncd.conf文件<br />
 uid = nobody<br />
 gid = nobody<br />
 use chroot = no<br />
 max connections = 4<br />
 log file = /var/log/rsyncd.log<br />
 pid file = /var/run/rsyncd.pid<br />
-lock file = /var/run/rsync.lock<br /></li>
-</ol>
-
-<p>[backup]<br />
+lock file = /var/run/rsync.lock<br />
+<br>
+[backup]<br />
 path = /opt/sudytech/backup<br />
 comment = backup folder<br />
 uid = root<br />
@@ -124,9 +123,8 @@ ignore errors<br />
 read only = no<br />
 list = no<br />
 auth users = root<br />
-secrets file = /etc/backup.scrt</p>
+secrets file = /etc/backup.scrt</p></li>
 
-<ol>
 <li><p>在/etc下建立backup.scrt文件<br />
 输入： 用户名：密码<br />
 例：rsynctest:testrsync<br />
