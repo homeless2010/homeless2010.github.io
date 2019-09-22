@@ -32,7 +32,8 @@ github_username:  homeless2010
 
 # Build settings
 #theme: minima
-theme: jekyll-theme-so-simple
+#theme: jekyll-theme-so-simple
+remote_theme: "mmistakes/so-simple-theme"
 plugins:
   - jekyll-feed
 
