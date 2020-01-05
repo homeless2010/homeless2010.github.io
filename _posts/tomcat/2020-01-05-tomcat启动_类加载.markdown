@@ -23,7 +23,7 @@
 ![initClassLoader.png](http://ww1.sinaimg.cn/mw690/a411b231ly1galv0b4um3j20rd0cfab6.jpg)
 - WebappClassLoader
 ![WebappClassLoader.png](http://ww1.sinaimg.cn/large/a411b231ly1galv13920yj20w00i0dfz.jpg)
-- 
+- 作用
 	- commonLoader：Tomcat最基本的类加载器，加载路径中的class可以被Tomcat容器本身以及各个Webapp访问；
 	- catalinaLoader：Tomcat容器私有的类加载器，加载路径中的class对于Webapp不可见；
 	- sharedLoader：各个Webapp共享的类加载器，加载路径中的class对于所有Webapp可见，但是对于Tomcat容器不可见；
