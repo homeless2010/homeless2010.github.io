@@ -1,6 +1,6 @@
 # tomcat启动与类加载机制
 - 启动类Bootstrap的main方法->Bootstrap.init->Bootstrap.initClassLoaders->    
-    
+<pre>   
 		URLClassLoader.................................
 			|				      .  
 		commonLoader                                  .
@@ -15,7 +15,7 @@
 		WebappClassLoader	WebappClassLoader     .
 			|                       |	      .
 			JasperLoader            JasperLoader...   
-    
+</pre>
 				
 *catalinaLoader,sharedLoader默认为commonLoader*
 				
