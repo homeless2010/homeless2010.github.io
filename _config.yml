@@ -36,6 +36,7 @@ github_username:  homeless2010
 remote_theme: "mmistakes/so-simple-theme"
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 
 # Exclude from processing.
 # The following items will not be processed, by default.
