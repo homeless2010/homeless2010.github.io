@@ -27,9 +27,10 @@ description: #>- # this means to ignore newlines until "baseurl:"
   java python javascript
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
+#twitter_username: jekyllrb
 github_username:  homeless2010
-
+locale:zh-CN
+date_format:"%Y-%m-%d"
 google_fonts:
   - name: "Source Sans Pro"
     weights: "400,400i,700,700i"
