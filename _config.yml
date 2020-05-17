@@ -45,6 +45,8 @@ remote_theme: mmistakes/so-simple-theme
 paginate: 10  # amount of posts to show per page
 paginate_path: /page:num/
 plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
 
@@ -76,15 +78,15 @@ defaults:
       type: posts
     values:
       layout: post
-      share: true
+      share: false
   # Recipe defaults
   - scope:
       path: "_recipes"
       type: recipes
     values:
       layout: post
-      comments: true
-      share: true
+      comments: false
+      share: false
 	  
 # Site Author
 author:
