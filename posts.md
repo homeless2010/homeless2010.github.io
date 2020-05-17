@@ -1,5 +1,5 @@
 ---
-title: 历史文章
+title: Post Archive
 layout: posts
 permalink: /posts/
 show_excerpts: true
