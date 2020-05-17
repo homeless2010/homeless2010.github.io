@@ -79,14 +79,6 @@ defaults:
     values:
       layout: post
       share: false
-  # Recipe defaults
-  - scope:
-      path: "_recipes"
-      type: recipes
-    values:
-      layout: post
-      comments: false
-      share: false
 	  
 # Site Author
 author:
