@@ -70,8 +70,7 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-# Front Matter Defaults
-	  
+# Front Matter Defaults  
 # Site Author
 author:
   name: Michael Rose
