@@ -38,6 +38,7 @@ google_fonts:
     weights: "400,400i,700,700i"
 
 # Build settings
+markdown: kramdown
 #theme: minima
 #theme: jekyll-theme-so-simple
 remote_theme: mmistakes/so-simple-theme
