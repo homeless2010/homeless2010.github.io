@@ -105,19 +105,19 @@ defaults:
 
 # Site Author
 author:
-  name: Michael Rose
+  name: homeless2010
   picture: /images/michael-rose-photo.jpg
-  email:
-  twitter: mmistakes
+  email: paulvsjames@gmail.com
+  twitter:
   links:
     - title: GitHub
-      url: https://github.com/homeless2010
+      url: https://github.com/mmistakes
       icon: fab fa-github-square
 
 # Footer Links
 footer_links:
   - title: GitHub
-    url: https://github.com/homeless2010
+    url: https://github.com/mmistakes
     icon: fab fa-github-square
   - title: Feed
     url: atom.xml
