@@ -13,16 +13,16 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-theme: jekyll-theme-so-simple
+remote_theme: mmistakes/so-simple-theme
 # remote_theme: mmistakes/so-simple-theme
 skin: "/assets/css/skins/default.css"
-locale: en-US
-title: "So Simple Development Site"
-description: "A simple Jekyll theme for words and pictures."
-baseurl: "/example" # the subpath of your site, e.g. "/blog"
+locale: zh-CN
+title: "homeless2010"
+description: "too young too simple sometimes native"
+baseurl: "" # the subpath of your site, e.g. "/blog"
 url: # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-logo: "/images/so-simple-site-logo.png" # path of site logo, e.g. "/assets/images/logo.png"
-date_format: "%B %-d, %Y"
+logo: #"/images/so-simple-site-logo.png" # path of site logo, e.g. "/assets/images/logo.png"
+date_format: "%Y-%m-%d"
 read_time: true
 words_per_minute: 200
 mathjax:
@@ -134,3 +134,4 @@ footer_links:
   - title: Feed
     url: atom.xml
     icon: fas fa-rss-square
+
