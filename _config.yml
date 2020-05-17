@@ -71,13 +71,6 @@ plugins:
 #   - vendor/ruby/
 
 # Front Matter Defaults
-defaults:
-  # Posts defaults
-  - scope:
-      path: "_posts"
-      type: posts
-    values:
-      layout: post
 	  
 # Site Author
 author:
