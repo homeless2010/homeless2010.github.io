@@ -1,0 +1,53 @@
+# tomcat启动与类加载机制
+- 启动类Bootstrap的main方法->Bootstrap.init->Bootstrap.initClassLoaders->    
+<pre>   
+		URLClassLoader.................................
+			|				      .  
+		commonLoader                                  .
+			|                                     .
+		_________________                             .
+		|                |                            .     
+/----------------------------------------/         	      .
+	catalinaLoader		sharedLoader                  .
+/----------------------------------------/                    .
+				|     ...                     .
+				|                             .
+		WebappClassLoader	WebappClassLoader     .
+			|                       |	      .
+			JasperLoader            JasperLoader...   
+</pre>
+				
+*catalinaLoader,sharedLoader默认为commonLoader*
+				
+- jvm类加载器    
+![initClassLoader.png](http://ww1.sinaimg.cn/mw690/a411b231ly1galv0b4um3j20rd0cfab6.jpg)
+- WebappClassLoader
+![WebappClassLoader.png](http://ww1.sinaimg.cn/large/a411b231ly1galv13920yj20w00i0dfz.jpg)
+- 
+	- commonLoader：Tomcat最基本的类加载器，加载路径中的class可以被Tomcat容器本身以及各个Webapp访问；
+	- catalinaLoader：Tomcat容器私有的类加载器，加载路径中的class对于Webapp不可见；
+	- sharedLoader：各个Webapp共享的类加载器，加载路径中的class对于所有Webapp可见，但是对于Tomcat容器不可见；
+	- WebappClassLoader：各个Webapp私有的类加载器，加载路径中的class只对当前Webapp可见；
+	![initClassLoader.png](http://ww1.sinaimg.cn/large/a411b231ly1galvdsh797j20rd0cfab6.jpg)
+	![createClassLoader.png](http://ww1.sinaimg.cn/large/a411b231ly1galvejlckwj21010jbq4k.jpg)
+	.loader加载的内容在/org/apache/catalina/startup/catalina.properties配置文件中，
+	比如要加载 common.loader对应的value，其在文件中的值为
+	${catalina.base}/lib,${catalina.base}/lib/*.jar,${catalina.home}/lib,${catalina.home}/lib/*.jar，
+	也就是说Common ClassLoader要加载的路径是这些，是Tomcat运行要使用的公共组件，比如servlet-api.jar、catalina.jar等；
+	而我们发现当要加载server.loader和shared.loader时，其key在配置文件中的value为空，
+	也就是说，默认情况下Catalina ClassLoader和Shared ClassLoader(Tomcat整体类加载体系结构图中红色虚线内)都不存在，
+	只有Common ClassLoader方法中的第二个参数表示创建类加载器的父类加载器是哪个，
+	再看initClassLoaders()方法图中代码，在创建catalinaLoader和sharedLoader时，
+	父类加载器传入的实际上就是commonLoader，以此可以验证Catalina ClassLoader、Shared ClassLoader和Common ClassLoader的父子关系，
+	Common ClassLoader则为URLClassLoader。
+- Thread.currentThread().setContextClassLoader(catalinaLoader);	
+__作用__        
+在双亲委托模型下，类加载器是由下至上的，即下层的类加载器会委托上层进行加载。
+但是对于SPI来说，有些接口是JAVA核心库提供的，而JAVA核心库是由启动类加载器来加载的，而这些接口的实现却来自于不同的jar包（厂商提供），
+AVA的启动类加载器是不会加载其他来源的jar包，这样传统的双亲委托模型就无法满足SPI的要求。而通过给当前线程设置上下文类加载器，
+就可以设置的上下文类加载器来实现对于接口实现类的加载。    
+_当高层提供了统一的接口让低层去实现，同时又要在高层加载（或者实例化）低层的类时，就必须要通过线程上下文类加载器来帮助高层的ClassLoader找到并加载该类_    
+[__参考__](https://www.cnblogs.com/549294286/p/3714692.html)
+- SecurityClassLoad.securityClassLoad(catalinaLoader)启用安全管理器时对tomcat核心类进行预加载
+
+				

@@ -7,30 +7,22 @@
 #
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you: 
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
+
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-
-title: homeless2010
-email: paulvsjames@gmail.com
-description: #>- # this means to ignore newlines until "baseurl:"
-  # Write an awesome description for your new site here. You can edit this
-  # line in _config.yml. It will appear in your document head meta (for
-  # Google search results) and in your feed.xml site description.
-  too young too simple sometimes native
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-#twitter_username: jekyllrb
-github_username:  homeless2010
+theme: jekyll-theme-so-simple
+# remote_theme: mmistakes/so-simple-theme
+skin: "/assets/css/skins/default.css"
 locale: zh-CN
-date_format: "%Y-%m-%d"
+title: "homeless2010"
+description: "too young too simple sometimes native"
+baseurl: "" # the subpath of your site, e.g. "/blog"
+url: # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+logo: #"/images/so-simple-site-logo.png" # path of site logo, e.g. "/assets/images/logo.png"
+date_format: "%Y-%m-d"
 read_time: true
 words_per_minute: 200
 mathjax:
@@ -46,7 +38,7 @@ google_analytics: # Google Analytics id, e.g. "UA-NNNNNNNN-N"
 disqus:
   shortname: # Disqus shortname, e.g. "my_disqus_shortname"
 twitter:
-  username: mmistakes # site's Twitter username
+  username: #mmistakes # site's Twitter username
 
 # Liquid
 liquid:
@@ -54,36 +46,43 @@ liquid:
 
 # Build settings
 markdown: kramdown
-#theme: minima
-#theme: jekyll-theme-so-simple
-remote_theme: mmistakes/so-simple-theme
-paginate: 10  # amount of posts to show per page
+feed:
+  path: atom.xml
+
+# Pagination - https://jekyllrb.com/docs/pagination/
+paginate: 10
 paginate_path: /page:num/
+
+# Search
+search_full_content: false
+
+# Taxonomy pages
+category_archive_path: "/categories/#"
+tag_archive_path: "/tags/#"
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Collections
+collections:
+  recipes:
+    output: true
+    permalink: /:collection/:path/
 
 # Front Matter Defaults
 defaults:
