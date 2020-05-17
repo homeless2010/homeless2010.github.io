@@ -78,7 +78,6 @@ defaults:
       type: posts
     values:
       layout: post
-      share: false
 	  
 # Site Author
 author:
