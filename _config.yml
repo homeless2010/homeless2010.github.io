@@ -41,6 +41,8 @@ google_fonts:
 #theme: minima
 #theme: jekyll-theme-so-simple
 remote_theme: mmistakes/so-simple-theme
+paginate: 10  # amount of posts to show per page
+paginate_path: /page:num/
 plugins:
   - jekyll-feed
   - jekyll-paginate
