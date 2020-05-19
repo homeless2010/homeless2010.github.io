@@ -12,5 +12,5 @@ permalink: /about/
 
 邮箱：[paulvsjames@gmail.com](mailto:paulvsjames@gmail.com) 
 
-留言或评论请使用 [Github Issues](https://homeless2010.github.io/issues)。
+留言或评论请使用 [Github Issues](https://github.com/homeless2010/homeless2010.github.io/issues)。
 
