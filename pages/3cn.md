@@ -1,7 +1,7 @@
 ---
 layout: cndefault
 permalink: /cn/
-title: 无求备斋笔记
+title: homeless2010随想
 ---
 
 <article>
