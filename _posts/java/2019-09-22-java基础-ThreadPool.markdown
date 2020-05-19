@@ -1,3 +1,11 @@
+---
+layout: post
+title: "java基础-ThreadPool"
+date: 2019-09-22 22:00:00
+categories: cn
+tags: [java]
+---
+
 # java.util.concurrent线程池EXecutor    
 * Executors线程工厂创建特定线程池    
     1. newFixedThreadPool()返回固定数量的线程池，线程数不变，任务提交线程池空闲立即执行，没有暂缓在一个任务队列等待

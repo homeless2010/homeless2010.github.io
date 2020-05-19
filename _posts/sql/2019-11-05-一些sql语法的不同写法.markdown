@@ -1,3 +1,11 @@
+---
+layout: post
+title: "sql语法（方言）"
+date: 2019-11-05 22:00:00
+categories: cn
+tags: [sql]
+---
+
 - <>与!= <>比价老，可移植性强
 - left/right join与(+)    
 >（+）操作符只能出现在WHERE子句中，并且不能与OUTER JOIN语法同时使用。    

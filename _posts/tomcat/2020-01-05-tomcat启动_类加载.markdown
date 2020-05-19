@@ -1,3 +1,11 @@
+---
+layout: post
+title: "tomcat类加载机制"
+date: 2020-01-05 22:00:00
+categories: cn
+tags: [tomcat,jvm]
+---
+
 # tomcat启动与类加载机制
 - 启动类Bootstrap的main方法->Bootstrap.init->Bootstrap.initClassLoaders->    
 <pre>   
