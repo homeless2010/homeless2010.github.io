@@ -4,13 +4,18 @@ title: homeless2010随想
 ---
 
 <article>
-<blockquote><p> 
-too young too simple sometimes native.
+<blockquote><p>
+图样图森破
 </p></blockquote>
 </article>
 
-<p style="margin-top:1.2em;margin-bottom:0;"><b>Blogs</b> | Browse by <a href="/archive#tags">Tags</a></p>
-<hr>
+<p style="text-align:left;margin-top:1.2em;margin-bottom:0;">
+<b>文章 </b>
+| 按<a href="/cnarchive#tags">标签</a>浏览 
+<!--<span style="float:right;">按<a href="/cnarchive#tags">标签</a>浏览</span>-->
+</p>
+---
+
 <table>
 {% for post in site.categories.cn %}
 <tr id="blog-table">
@@ -20,4 +25,4 @@ too young too simple sometimes native.
 {% endfor %}
 </table>
 <hr>
-<p>All posts <a href="/archive">archived</a></p>
+<p>博文<a href="/cnarchive">归档</a></p>

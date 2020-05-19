@@ -1,7 +1,7 @@
 ---
 layout: cndefault
 title: 关于
-permalink: /cnabout/
+permalink: /about/
 ---
 
 ### 崔朝将
