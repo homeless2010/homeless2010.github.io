@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: endefault
 title: Archive (Chinese Posts Included)
-permalink: /archive/
+permalink: /enarchive/
 ---
 
 ### Archive (Chinese Posts Included)

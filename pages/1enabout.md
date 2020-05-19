@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: endefault
 title: About
-permalink: /about/
+permalink: /enabout/
 ---
 
 ### ZHENG Fan 郑帆

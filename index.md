@@ -1,5 +1,5 @@
 ---
-layout: cndefault
+layout: default
 title: homeless2010随想
 ---
 
@@ -11,8 +11,8 @@ title: homeless2010随想
 
 <p style="text-align:left;margin-top:1.2em;margin-bottom:0;">
 <b>文章 </b>
-| 按<a href="/cnarchive#tags">标签</a>浏览 
-<!--<span style="float:right;">按<a href="/cnarchive#tags">标签</a>浏览</span>-->
+| 按<a href="/archive#tags">标签</a>浏览 
+<!--<span style="float:right;">按<a href="/archive#tags">标签</a>浏览</span>-->
 </p>
 ---
 
@@ -25,4 +25,4 @@ title: homeless2010随想
 {% endfor %}
 </table>
 <hr>
-<p>博文<a href="/cnarchive">归档</a></p>
+<p>博文<a href="/archive">归档</a></p>

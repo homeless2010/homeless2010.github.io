@@ -1,5 +1,5 @@
 ---
-layout: cndefault
+layout: default
 title: 归档 (含英文博客)
 permalink: /archive/
 ---
