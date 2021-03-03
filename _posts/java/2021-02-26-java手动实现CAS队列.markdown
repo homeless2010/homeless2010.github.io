@@ -14,6 +14,7 @@ tags: [java]
  * sun.misc.Unsafe
  > jdk直接操作内存
  
+```
 	package consumer.queue.cas;
 
 	import consumer.queue.SQueue;
@@ -135,3 +136,4 @@ tags: [java]
 		}
 
 	}
+```
