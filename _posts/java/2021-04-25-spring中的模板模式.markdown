@@ -1,0 +1,32 @@
+---
+layout: post
+title: "spring中的模板模式"
+date: 2021-04-25 20:00:00
+categories: cn
+tags: [java]
+---
+
+*spring中有各种各样模板，略去了实现细节，方便扩展与维护*
+# JdbcTemplate
+	```
+	JdbcOperations
+		|
+		|implements
+		|
+	JdbcAccessor
+		|
+		|extends
+		|
+	JdbcTemplate
+	```
+	* JdbcOperations抽象了数据库操作
+	* JdbcAccessor定义了DataSource和异常转换器
+	* JdbcTemplate实现了CRUD
+# 数据源配置
+	DataSourceAutoConfiguration
+				|
+			    |
+	JdbcTemplateAutoConfiguration
+	![DataSourceAutoConfiguration](https://homeless2010.github.io/picture/java/2021-04-25-spring%E4%B8%AD%E7%9A%84%E6%A8%A1%E6%9D%BF%E6%A8%A1%E5%BC%8F/20210426110129.png "DataSourceAutoConfiguration")
+	![DataSourceConfiguration](https://homeless2010.github.io/picture/java/2021-04-25-spring%E4%B8%AD%E7%9A%84%E6%A8%A1%E6%9D%BF%E6%A8%A1%E5%BC%8F/20210426110158.png "DataSourceConfiguration")
+	2.0^默认数据源hikari
