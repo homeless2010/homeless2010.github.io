@@ -19,10 +19,9 @@ tags: [java]
 		|
 	JdbcTemplate
 ```
-
-	* JdbcOperations抽象了数据库操作
-	* JdbcAccessor定义了DataSource和异常转换器
-	* JdbcTemplate实现了CRUD
+* JdbcOperations抽象了数据库操作
+* JdbcAccessor定义了DataSource和异常转换器
+* JdbcTemplate实现了CRUD
 # 数据源配置
 	DataSourceAutoConfiguration
 				|
