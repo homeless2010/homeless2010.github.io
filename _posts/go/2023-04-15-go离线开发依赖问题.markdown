@@ -1,0 +1,20 @@
+---
+layout: post
+title: "go离线开发依赖问题"
+date: 2023-04-15 23:48:00
+categories: cn
+tags: [go]
+---
+
+**网络畅通情况下设置GOPROXY即可轻松安装依赖模块，在离线下如何安装依赖模块呢，有如下两种方法**
+
+* 设置GOPROXY为本地GOPATH缓存目录    
+  > 在有网机器上go get下的依赖在GOPATH/pkg/mod/cache/download目录   
+  ![](../../img/go/2023-04-15-go离线开发依赖问题/gopath.png)
+  ![](../../img\go\2023-04-15-go离线开发依赖问题\download.png)    
+  **将此目录copy至离线机器xxx/download目录，同时设置GOPROXY=file:///xxx/download**    
+  ![](../../img\go\2023-04-15-go离线开发依赖问题\goproxy.png)
+  
+----------------------------------------------------------
+* 为工程设置GOPATH为xxx/download目录    
+  ![](../../img\go\2023-04-15-go离线开发依赖问题\gopath.png)    
